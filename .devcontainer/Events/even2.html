@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <button class="stop"></button>
+</body>
+<script>
+    const say = function(){
+        console.log("hi");
+    }
+    const tell = function(){
+        console.log("Hey");
+    }
+    const changeMe = setTimeout(say,2000)
+    
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe) // will stop the setTimeout
+        console.log("Stopped")
+    })
+    // setInterval(() => {
+    // },2000);
+</script>
+</html>
